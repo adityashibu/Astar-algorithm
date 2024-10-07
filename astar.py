@@ -64,10 +64,11 @@ def astar_search(grid, start, goal):
 # Grid initialization
 def initialize_grid():
     grid = [
-        [1, 1, -1, 2, 1, 1],
-        [2, 2, 1, 2, 1, 1],
-        [1, 1, -1, 2, 2, 1],
-        [2, -1, -1, 1, 2, 2]
+        [1, 1, -1, 2, 1],
+        [2, 1, 1, 2, 1],
+        [1, 1, -1, 1, 1],
+        [2, 1, 2, 1, 2],
+        [2, -1, -1, 1, 2],
     ]
     return grid
 
@@ -75,7 +76,7 @@ def main():
     grid = initialize_grid()
 
     start = (0, 0)
-    goal = (2, 5)
+    goal = (4, 3)
 
     # Run the A* search
     path, cost = astar_search(grid, start, goal)
